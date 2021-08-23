@@ -1,19 +1,17 @@
 <p>Klikniety {{ klik }}</p>
 
 <form [formGroup]="naszForm" (ngSubmit)="wyslij()">
-    <label>Imie</label>
-    <input type="text" formControlName="imie"/>
-    <br>
-    <label>Nazwisko</label>
-    <input type="text" formControlName="nazwisko"/>
-    <br>
-    <button type="submit">Wyslij</button>
+  <label>Imie</label>
+  <input type="text" formControlName="imie" />
+  <br>
+  <label>Nazwisko</label>
+  <input type="text" formControlName="nazwisko" />
+  <br>
+  <button type="submit">Wyslij</button>
 </form>
 
 {{ naszForm.value | json }}
 
-<app-child [imie]="naszForm.value.imie"
-    (zmieniony)="Klikniety($event)"
->
+<app-child [imie]="naszForm.value.imie" (zmieniony)="Klikniety($event)">
 
 </app-child>
