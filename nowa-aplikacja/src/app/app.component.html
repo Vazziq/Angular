@@ -11,4 +11,10 @@
   </div>
   <h2>{{ dzisiaj | date:"MMMM d, y" }}</h2>
   <h2>{{ kasa | currency:'EUR' }}</h2>
+  <nav>
+    <a routerLink="jeden">Jeden</a><br>
+    <a routerLink="dwa/5">Dwa</a><br>
+  </nav>
 </div>
+
+<router-outlet></router-outlet>

@@ -1,5 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { OsobyService } from './osoby.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -19,14 +21,18 @@ export class AppComponent implements OnInit, OnDestroy {
     { imie: 'Kacper', wiek: 21 },
   ];
   dzisiaj = new Date();
-  kasa = 2.23;
+  kasa = 13;
 
 
 
-  constructor(private osobyService: OsobyService) { }
+  constructor(private osobyService: OsobyService,
+    private route: ActivatedRoute,
+    private location: Location,) { }
 
   ngOnInit() {
+    this.kasa = +this.route.snapshot.paramMap.get('tak');
     console.log('komponment init');
+
 
   }
 
@@ -35,6 +41,6 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   wyslij = () => {
-    this.wyswietl = !this.wyswietl
+    this.location.back()
   };
 };
