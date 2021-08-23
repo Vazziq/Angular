@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit, OnDestroy {
   title = 'Angular';
   imie = 'Krystian';
   wyswietl = true;
@@ -18,6 +18,13 @@ export class AppComponent {
     { imie: 'Kacper', wiek: 21 },
   ];
 
+  ngOnInit() {
+    console.log('komponment init');
+  }
+
+  ngOnDestroy() {
+    console.log('komponent zniszczony');
+  }
 
   wyslij = () => {
     this.wyswietl = !this.wyswietl
