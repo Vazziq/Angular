@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { OsobyService } from './osoby.service';
 
 @Component({
   selector: 'app-root',
@@ -17,9 +18,16 @@ export class AppComponent implements OnInit, OnDestroy {
     { imie: 'Grzegorz', wiek: 56 },
     { imie: 'Kacper', wiek: 21 },
   ];
+  dzisiaj = new Date();
+  kasa = 2.23;
+
+
+
+  constructor(private osobyService: OsobyService) { }
 
   ngOnInit() {
     console.log('komponment init');
+
   }
 
   ngOnDestroy() {

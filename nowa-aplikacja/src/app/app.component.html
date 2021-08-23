@@ -1,6 +1,6 @@
 <div style="text-align: center;">
   <h1>
-    Witaj {{ imie }}! <br>
+    Witaj {{ imie | uppercase }}! <br>
     {{ wyswietl }} <br>
     <input *ngIf="wyswietl" [(ngModel)]="imie" type="text" />
 
@@ -9,4 +9,6 @@
   <div *ngFor="let osoba of osoby;">
     {{ osoba.imie }} ma lat {{ osoba.wiek }}
   </div>
+  <h2>{{ dzisiaj | date:"MMMM d, y" }}</h2>
+  <h2>{{ kasa | currency:'EUR' }}</h2>
 </div>
