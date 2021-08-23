@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-jeden',
@@ -7,6 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JedenComponent implements OnInit {
 
+  naszForm = new FormGroup({
+    imie: new FormControl(''),
+    nazwisko: new FormControl(''),
+
+  });
+
+  klik: Boolean = false;
+
+
+  wyslij() {
+    console.log(this.naszForm.value);
+  }
+  Klikniety(noweDane: boolean) {
+    this.klik = noweDane;
+
+  }
   constructor() { }
 
   ngOnInit(): void {
