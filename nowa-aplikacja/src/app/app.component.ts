@@ -21,17 +21,18 @@ export class AppComponent implements OnInit, OnDestroy {
     { imie: 'Kacper', wiek: 21 },
   ];
   dzisiaj = new Date();
-  kasa = 13;
+  kasa = 12;
 
 
 
   constructor(private osobyService: OsobyService,
     private route: ActivatedRoute,
-    private location: Location,) { }
+    private location: Location,
+    ) { }
 
   ngOnInit() {
-    this.kasa = +this.route.snapshot.paramMap.get('tak');
-    console.log('komponment init');
+    // this.kasa = +this.route.snapshot.paramMap.get('tak');
+    // console.log('komponment init');
 
 
   }
