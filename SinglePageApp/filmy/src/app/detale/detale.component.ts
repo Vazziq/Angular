@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { FilmyService } from '../filmy.service';
+import { Film } from '../modele/film';
 
 @Component({
   selector: 'app-detale',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetaleComponent implements OnInit {
 
-  constructor() { }
+  film: Film[];
+
+  constructor(
+    private route: ActivatedRoute,
+    private fs: FilmyService,
+  ) { }
 
   ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    console.log('id', id)
+    this.film = this.fs.getFilm(Number(id));
+    
   }
 
 }

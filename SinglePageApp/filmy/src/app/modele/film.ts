@@ -1,6 +1,6 @@
 export interface Film {
-    id: Number;
-    tytul: String;
+    id: number;
+    tytul: string;
     rok?: number;
     opis?: string;
 }

@@ -9,12 +9,12 @@ import { Film } from '../modele/film';
 })
 export class ListaComponent implements OnInit {
 
-  filmy: Film[] = [];
+  filmy: Film[];
 
   constructor(private fs: FilmyService) { }
 
   ngOnInit(): void {
-    this.filmy = this.fs.wszystkieFilmy()
+    this.filmy = this.fs.wszystkieFilmy();
     console.table(this.filmy);
   }
 
