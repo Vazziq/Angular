@@ -10,7 +10,7 @@ import { Film } from '../modele/film';
 })
 export class DetaleComponent implements OnInit {
 
-  film: Film[];
+  film: Film;
 
   constructor(
     private route: ActivatedRoute,
@@ -21,7 +21,6 @@ export class DetaleComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     console.log('id', id)
     this.film = this.fs.getFilm(Number(id));
-    
   }
 
 }

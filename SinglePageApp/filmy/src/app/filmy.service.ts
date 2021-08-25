@@ -17,7 +17,7 @@ export class FilmyService {
   wszystkieFilmy(): Film[] {
     return this.filmy;
   }
-  getFilm(id: Number): Film[] {
-    return this.filmy;
+  getFilm(id: number): Film {
+    return this.filmy[id];
   }
 }
