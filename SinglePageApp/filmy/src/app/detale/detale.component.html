@@ -1,8 +1,10 @@
-<h1>
-  {{ film.tytul }} {{ film.rok }}
-</h1>
+<h4>
+  {{ film.tytul }}<br>({{ film.rok }})
+</h4>
 <p>
   {{ film.opis }}
 </p>
 
-<img src="assets/{{ film.tytul }}.jpg" width="200" />
+<img src="assets/{{ film.tytul }}.jpg" width="200" /><br>
+
+<button (click)="cofnij()" type="button" class="btn btn-outline-warning">Cofnij</button>

@@ -1,6 +1,7 @@
-body h2 {
+body h1 {
     text-align: center;
     background-color: wheat;
     margin: 0px;
     padding: 20px;
+    font-weight: bolder;
 }

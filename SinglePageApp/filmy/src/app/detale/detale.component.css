@@ -1,5 +1,6 @@
-h1, p {
+h4, p {
     text-align: center;
+    font-weight: bolder
 }
 
 img {
@@ -9,5 +10,17 @@ img {
     border: 5px solid gold;
     border-radius: 10px;
     background-color: wheat;
+    cursor: pointer;
+}
+
+button {
+    display: block;
+    padding: auto;
+    margin: auto;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: white;
+    color: black;
     cursor: pointer;
 }

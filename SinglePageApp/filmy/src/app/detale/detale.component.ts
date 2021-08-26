@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FilmyService } from '../filmy.service';
 import { Film } from '../modele/film';
+import { Location } from '@angular/common'
 
 @Component({
   selector: 'app-detale',
@@ -15,6 +16,8 @@ export class DetaleComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private fs: FilmyService,
+    private location: Location,
+
   ) { }
 
   ngOnInit(): void {
@@ -22,5 +25,7 @@ export class DetaleComponent implements OnInit {
     console.log('id', id)
     this.film = this.fs.getFilm(Number(id));
   }
-
+cofnij() {
+  this.location.back();
+}
 }
