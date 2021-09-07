@@ -1,0 +1,130 @@
+<!--Main Navigation-->
+<header>
+  <style>
+    #intro {
+      background-image: url(../assets/bwi_tlo.jpg);
+      height: 100vh;
+    }
+
+    img {
+      margin-bottom: 2rem;
+    }
+
+    .strike {
+      display: block;
+      text-align: center;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .strike>span {
+      position: relative;
+      display: inline-block;
+      font-weight: bolder;
+    }
+
+    .strike>span:before,
+    .strike>span:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 9999px;
+      height: 1px;
+      background-color: #1266F1;
+    }
+
+    .strike>span:before {
+      right: 100%;
+      margin-right: 15px;
+    }
+
+    .strike>span:after {
+      left: 100%;
+      margin-left: 15px;
+    }
+  </style>
+
+  <!-- Navbar -->
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+    <div class="container-fluid"> -->
+  <!-- Navbar brand -->
+  <!-- <a class="navbar-brand nav-link" target="_blank">
+        <div>
+          <img class="img-fluid" src="../assets/bwi-logo.png">
+          <strong>BWI</strong>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+        aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarExample01">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+  <!-- Navbar -->
+
+  <!-- Background image -->
+  <div id="intro" class="bg-image shadow-2-strong">
+    <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0, 0, 0, 0.8);">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-5 col-md-8">
+            <form class="bg-white  rounded-5 shadow-5-strong p-5">
+              <!-- Navbar -->
+              <div class="container">
+                <!-- Navbar brand -->
+                <div>
+                  <a class="navbar-brand nav-link d-flex justify-content-center" target="_blank">
+                    <img class="img" src="../assets/bwi-logo.png">
+                  </a>
+                </div>
+              </div>
+              <!-- Navbar -->
+              <!-- Email input -->
+              <div class="form-outline">
+                <input type="email" id="form1Example1" class="form-control" placeholder="Net ID" />
+                <label class="form-label" for="form1Example1"></label>
+              </div>
+
+              <!-- Password input -->
+              <div class="form-outline">
+                <input type="password" id="form1Example2" class="form-control" placeholder="Hasło" />
+                <label class="form-label" for="form1Example2"></label>
+              </div>
+
+              <!-- 2 column grid layout for inline styling -->
+              <div class="row mb-4">
+                <div class="col d-flex justify-content-center">
+                  <!-- Checkbox -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+                    <label class="form-check-label" for="form1Example3">
+                      Pamiętaj mnie
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Submit button -->
+              <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary">Zaloguj</button>
+              </div>
+              <br>
+              <div class="strike">
+                <span>Albo</span>
+              </div>
+              <!-- <span class="d-flex justify-content-center mt-2">Użyj Karty</span> -->
+              <div class="d-flex justify-content-center mt-4">
+                <i class="fas fa-id-card-alt fa-5x" style="color: #1266F1"></i>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Background image -->
+  <router-outlet></router-outlet>
